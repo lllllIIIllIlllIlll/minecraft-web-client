@@ -2,7 +2,8 @@ import { getThreeJsRendererMethods } from 'renderer/viewer/three/threeJsMethods'
 
 customEvents.on('mineflayerBotCreated', () => {
   customEvents.on('hurtAnimation', (yaw) => {
-    getThreeJsRendererMethods()?.shakeFromDamage()
+    // 画面揺れのエフェクトを無効化
+    // getThreeJsRendererMethods()?.shakeFromDamage()
   })
 
   bot._client.on('hurt_animation', ({ entityId, yaw }) => {
